@@ -1,0 +1,99 @@
+﻿/* Основен стил за страница с детайли */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заглавие */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 30px;
+}
+
+/* Основен контейнер за съдържанието */
+div {
+    background-color: #fff;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+}
+
+/* Разделител */
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Стил за описание на елементи */
+dl {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+}
+
+/* Етикети на полетата (например името, специалност и телефон) */
+dt {
+    font-weight: bold;
+    color: #555;
+    width: 25%;
+    margin-bottom: 8px;
+    padding-right: 10px;
+}
+
+/* Стойности на полетата */
+dd {
+    color: #333;
+    width: 75%;
+    margin-bottom: 8px;
+}
+
+/* Класове за бутоните */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px 5px;
+    font-size: 14px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Клас за бутоните */
+.btn-save {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+    .btn-save:hover {
+        background-color: #45a049;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a636a;
+    }
+
+/* Резюме на медиите */
+@media (max-width: 768px) {
+    dt, dd {
+        width: 100%;
+        display: block;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<head>
+    <link rel="stylesheet" href="~/css/main.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        <h1>Добре дошли в нашата платформа!</h1>
+    </header>
+    <div class="intro">
+        <h1>Вашето здраве е нашата мисия</h1>
+        <p>
+            Нашата цел е да ви предоставим лесен и удобен начин за запазване на час при доказани медицински специалисти.
+            С няколко клика можете да намерите лекар, който да отговори на вашите нужди, и да си осигурите необходимата грижа.
+        </p>
+        <p>Изберете категорията, която ви интересува, или потърсете специалист по ваш избор!</p>
+        <div class="buttons">
+            <a class="nav-link" asp-area="" asp-controller="Doctors" asp-action="Index">Преглед на специалисти</a>
+            <a class="nav-link" asp-area="" asp-controller="Appointments" asp-action="Index">Преглед на запазените часове</a>
+        </div>
+    </div>
+</body>

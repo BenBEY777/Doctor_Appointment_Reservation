@@ -1,0 +1,42 @@
+﻿@model Appointment
+
+@{
+    ViewData["Title"] = "Редактиране на Час";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+
+<head>
+    <link rel="stylesheet" href="~/css/AppointmentsEdit.css" asp-append-version="true" />
+</head>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="DoctorName"></label>
+        <select asp-for="DoctorName" class="form-control" asp-items="ViewBag.Doctors"></select>
+        <span asp-validation-for="DoctorName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="PatientName"></label>
+        <input asp-for="PatientName" class="form-control" />
+        <span asp-validation-for="PatientName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AppointmentDate"></label>
+        <input asp-for="AppointmentDate" class="form-control" type="date" />
+        <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AppointmentTime"></label>
+        <input asp-for="AppointmentTime" class="form-control" type="time" />
+        <span asp-validation-for="AppointmentTime" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Запази</button>
+    <a asp-action="Index" class="btn btn-secondary">Назад</a>
+</form>

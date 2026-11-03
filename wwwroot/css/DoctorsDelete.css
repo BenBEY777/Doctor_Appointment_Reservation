@@ -1,0 +1,97 @@
+﻿/* Заглавия и текст */
+h1 {
+    font-size: 2rem;
+    color: #d9534f; /* Червен цвят за заглавие */
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: 1.25rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+/* Разделител на съдържание */
+hr {
+    border-top: 1px solid #ccc;
+    margin-bottom: 2rem;
+}
+
+/* Стилове за списъка с данни */
+.dl-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+}
+
+    .dl-row dt {
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 0.5rem;
+        flex: 1 0 20%;
+    }
+
+    .dl-row dd {
+        margin-bottom: 0.5rem;
+        flex: 1 0 75%;
+    }
+
+/* Стилове за бутоните */
+form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-danger {
+    background-color: #d9534f;
+    color: white;
+    border: none;
+}
+
+    .btn-danger:hover {
+        background-color: #c9302c;
+    }
+
+.btn-secondary {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+}
+
+    .btn-secondary:hover {
+        background-color: #5a6268;
+    }
+
+/* Рамка за контейнера */
+div {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стилове за мобилни устройства */
+@media (max-width: 768px) {
+    .dl-row dt,
+    .dl-row dd {
+        flex: 1 0 100%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+}

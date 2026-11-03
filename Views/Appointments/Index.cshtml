@@ -1,0 +1,47 @@
+﻿@model IEnumerable<Appointment>
+
+@{
+    ViewData["Title"] = "Списък на Запазени Часове";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<head>
+    <link rel="stylesheet" href="~/css/AppointmentsIndex.css" asp-append-version="true" />
+</head>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Доктор</th>
+            <th>Пациент</th>
+            <th>Дата</th>
+            <th>Час</th>
+            <!--<th>Действия</th>-->
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var appointment in Model)
+        {
+            <tr>
+                <td>@appointment.DoctorName</td>
+                <td>@appointment.PatientName</td>
+                <td>@appointment.AppointmentDate.ToString("dd/MM/yyyy")</td>
+                <td>@appointment.AppointmentTime.ToString(@"hh\:mm")</td>
+
+                <!--
+                    <td>
+                    <a asp-action="Edit" asp-route-id="@appointment.Id" class="btn">Редактирай</a>
+                    <a asp-action="Details" asp-route-id="@appointment.Id" class="btn">Детайли</a>
+                    <a asp-action="Delete" asp-route-id="@appointment.Id" class="btn ">Изтрий</a>
+                </td>
+                -->
+
+            </tr>
+        }
+    </tbody>
+</table>
+<p>
+    <a asp-action="Create" class="btn btn-primary">Запази Нов Час</a>
+    <a asp-action="ExportToWord" class="btn btn-primary">Експортирай в Word</a>
+</p>

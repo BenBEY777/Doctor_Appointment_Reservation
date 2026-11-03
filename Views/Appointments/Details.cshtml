@@ -1,0 +1,32 @@
+﻿@model Appointment
+
+@{
+    ViewData["Title"] = "Детайли за Часа";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<head>
+    <link rel="stylesheet" href="~/css/DoctorsDetails.css" asp-append-version="true" />
+</head>
+<div>
+    <h4>Запазен Час</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">Доктор</dt>
+        <dd class="col-sm-10">@Model.DoctorName</dd>
+
+        <dt class="col-sm-2">Пациент</dt>
+        <dd class="col-sm-10">@Model.PatientName</dd>
+
+        <dt class="col-sm-2">Дата</dt>
+        <dd class="col-sm-10">@Model.AppointmentDate.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-2">Час</dt>
+        <dd class="col-sm-10">@Model.AppointmentTime.ToString(@"hh\:mm")</dd>
+
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-save">Редактирай</a>
+        <a asp-action="Index" class="btn btn-secondary">Назад</a>
+    </dl>
+</div>
+

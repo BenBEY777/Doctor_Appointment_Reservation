@@ -1,0 +1,35 @@
+﻿@model Appointment
+
+@{
+    ViewData["Title"] = "Изтриване на Час";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<head>
+    <link rel="stylesheet" href="~/css/AppointmentsDelete.css" asp-append-version="true" />
+</head>
+<h3>Сигурни ли сте, че искате да изтриете този час?</h3>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">Доктор</dt>
+        <dd class="col-sm-10">@Model.DoctorName</dd>
+
+        <dt class="col-sm-2">Пациент</dt>
+        <dd class="col-sm-10">@Model.PatientName</dd>
+
+        <dt class="col-sm-2">Дата</dt>
+        <dd class="col-sm-10">@Model.AppointmentDate.ToString("dd/MM/yyyy")</dd>
+
+        <dt class="col-sm-2">Час</dt>
+        <dd class="col-sm-10">@Model.AppointmentTime.ToString(@"hh\:mm")</dd>
+    </dl>
+</div>
+
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Изтрий</button>
+    <a asp-action="Index" class="btn btn-secondary">Назад</a>
+</form>
+
